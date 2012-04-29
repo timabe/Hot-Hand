@@ -107,6 +107,7 @@ hot_hand(streak_count, historical.list)
 
 
 # plot the performance
-ggplot(hot_hand_result, aes(streak, count - expected_count)) + geom_bar(stat = 'identity',position = 'dodge', fill = 'steelblue', color = 'yellow') + 
+ggplot(hot_hand_result, aes(streak, count - expected_count)) + 
+  geom_bar(stat = 'identity',position = 'dodge', fill = 'steelblue', color = 'yellow') + 
   labs(x = 'Streak of makes', y = 'Performance above or below expected') + 
   opts(title = historical.list[[3]])
